@@ -37,9 +37,17 @@ Navigate to the IIS website in your browser and you should see Universal Dashboa
 
 ![](../.gitbook/assets/iis-running.png)
 
+## Creating Nested IIS Sites
+
+{% hint style="info" %}
+Requires Universal Dashboard 2.3 or later
+{% endhint %}
+
+To create a nested IIS site, follow the same steps as above but nest your UD site beneath another site. You will have to make one change to the UD installation in this type of configuration. Within the UD folder, find the `index.html` file in the `client` folder. 
+
+Within this file, change the `base` 's `href` attribute to match the relative URL of your UD installation. If you wanted to have the URL resolve to `http://myServer:8080/dashboards/dashboard`you would set the value of the `href` attribute to `/dashboards/dashboard`.
+
 ## Licensing
 
-The license should be named license.lic and placed in the `net451` folder within `wwwroot`. This will ensure that the license is persistent throughout restarts.
-
-![](../.gitbook/assets/iis-license.bin)
+The license should be named license.lic and placed in the `net472` folder within `wwwroot`. This will ensure that the license is persistent throughout restarts.
 
