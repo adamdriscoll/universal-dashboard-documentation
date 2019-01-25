@@ -29,6 +29,7 @@
   * [HTML](components/html.md)
   * [Inputs](components/inputs.md)
   * [Monitors](components/monitors.md)
+  * [Navigation](components/navigation.md)
   * [Pages](components/pages.md)
   * [Tables](components/tables.md)
 * [Endpoints](endpoints/README.md)
