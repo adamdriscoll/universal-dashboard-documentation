@@ -35,6 +35,18 @@ New-UDEndpoint -Url "/process/:id" -Method "GET" -Endpoint {
 }
 ```
 
+### Using RegEx in Endpoint URLs
+
+Instead of simple variables, you can instead use RegEx expressions to match URL patterns. This is handy for integration with systems like the DSC PullServer that provides complex URL patterns. Named groups will be passed to the endpoint as parameters. You'll need to include the `-EvaluateUrlAsRegex` parameter to `New-UDEndpoint`.
+
+```text
+New-UDEndpoint -Url "Nodes\(AgentId='(?<AgentId>.*)'\)" -Method PUT -Endpoint {
+    param (
+        $AgentId
+    )
+} -EvaluateUrlAsRegex
+```
+
 ### Endpoints that take data from the HTTP request body
 
 HTTP methods like POST take data from the request body. UD supports form data and string data. Form data will automatically be parsed and provided to the script block via parameters.
