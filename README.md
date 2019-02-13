@@ -22,5 +22,5 @@ Universal Dashboard also features a free Community Edition. This edition is [ope
 
 `Install-Module UniversalDashboard.Community -AcceptLicense`
 
-For a full list of the differences between Community and Enterprise, visit the [Feature Comparison](feature-comparison.md) page. 
+For a full list of the differences between Community and Enterprise, visit the [Feature Comparison](feature-comparison.md) page.
 

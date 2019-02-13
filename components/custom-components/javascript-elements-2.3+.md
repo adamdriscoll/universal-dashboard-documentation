@@ -1,9 +1,3 @@
----
-description: >-
-  Includes documentation on how to create JavaScript elements with Universal
-  Dashboard 2.3 or later.
----
-
 # JavaScript Elements \(2.3+\)
 
 With Universal Dashboard 2.3 and later you can now define JavaScript elements without having to use `New-UDElement`. You can define your own objects and cmdlets without writing any C\# code. 
