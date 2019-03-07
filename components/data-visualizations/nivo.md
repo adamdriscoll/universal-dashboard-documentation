@@ -39,7 +39,7 @@ New-UDNivoChart -Line -Data $Data -Height 400 -Width 900
 
 The above code produces the following chart. 
 
-![Nivo Line Chart](../../.gitbook/assets/image%20%282%29.png)
+![Nivo Line Chart](../../.gitbook/assets/image%20%284%29.png)
 
 As you can see the data needs to be a  particular format for each type of chart. The documentation for each chart will provide the data structure you should use. 
 
@@ -73,7 +73,7 @@ New-UDNivoChart -Colors 'dark2' -Bar -Data $Data -Height 400 -Width 900 -Keys @(
 
 The above script produces the following chart. 
 
-![Bar chart with the dark2 color palette](../../.gitbook/assets/image%20%286%29.png)
+![Bar chart with the dark2 color palette](../../.gitbook/assets/image%20%288%29.png)
 
 ## Patterns
 
@@ -125,7 +125,7 @@ New-UDNivoChart -Definitions $Pattern -Fill $Fill -Bar -Data $Data -Height 400 -
 
 The above script results in the following chart. 
 
-![Bar chart with a pattern](../../.gitbook/assets/image%20%285%29.png)
+![Bar chart with a pattern](../../.gitbook/assets/image%20%287%29.png)
 
 ## Interactive Charts
 
