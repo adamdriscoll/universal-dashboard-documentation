@@ -34,7 +34,7 @@ To debug an endpoint in VS Code, you can use the PowerShell Attach to Host Proce
 
 ![Adding a launch configuration](.gitbook/assets/image%20%2810%29.png)
 
-Once you have a launch.json file created, you can then setup the configuration to connect to the remote runspace that is current InBreakpoint. You will need the process ID of the PowerShell process running UD. You can find this by evaluating the `$PID` variable in the PowerShell console. 
+Once you have a launch.json file created, you can then setup the configuration to connect to the remote runspace that is currently InBreakpoint. You will need the process ID of the PowerShell process running UD. You can find this by evaluating the `$PID` variable in the PowerShell console. 
 
 The next step is to set the runspaceId to the runspace that is currently InBreakpoint. In the `launch.json` file, edit the PowerShell Attach to Host Process configuration's runspaceId property to contain the runspace ID listed in the console. 
 
