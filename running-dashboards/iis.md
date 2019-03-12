@@ -45,7 +45,26 @@ Requires Universal Dashboard 2.3 or later
 
 To create a nested IIS site, follow the same steps as above but nest your UD site beneath another site. You will have to make one change to the UD installation in this type of configuration. Within the UD folder, find the `index.html` file in the `client` folder. 
 
-Within this file, change the `base` 's `href` attribute to match the relative URL of your UD installation. If you wanted to have the URL resolve to `http://myServer:8080/dashboards/dashboard`you would set the value of the `href` attribute to `/dashboards/dashboard`.
+Within this file, change the `base` 's `href` attribute to match the relative URL of your UD installation. If you wanted to have the URL resolve to `http://myServer:8080/dashboards/dashboard`you would set the value of the `href` attribute to `/dashboards/dashboard/`.
+
+For the URL of the two script files, you will need to remove the preceding `/` .
+
+An example `index.html` looks like this. 
+
+```text
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/dashboards/dashboard/"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PowerShell Universal Dashboard</title>
+<link rel="shortcut icon" href="favicon.ico"></head>
+<body>
+    <div id="app" class="app"/>
+    <script type="text/javascript" src="main.9be8329c352d5b5e7801.bundle.js"></script><script type="text/javascript" src="vendor.9be8329c352d5b5e7801.bundle.js"></script></body>
+</html>
+```
 
 ## Licensing
 
