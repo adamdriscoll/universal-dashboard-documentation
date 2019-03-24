@@ -21,7 +21,7 @@ You should be able to view your dashboard by visiting [http://localhost:1000](ht
 Using `Get-UDDashboard`, you can return all the dashboards running in the current PowerShell session. This does not list dashboards in different processes. It only lists dashboards running in the current process.
 
 ```text
-PS> Get-UDashboard
+PS> Get-UDDashboard
 
 Name       Port Running
 ----       ---- -------
