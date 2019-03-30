@@ -71,6 +71,14 @@ Set-UDElement -Id "txtName" -Attributes @{
 
 The above call sets the width of the txtName to 100 pixels.
 
+
+
+```text
+Set-UDElement -Id "txtName" -Content {"Hello World"}
+```
+
+The above call sets the content of an element to "Hello World"
+
 ### Adding Child Elements
 
 You can add additional content to an existing element by using the `Add-UDElement` cmdlet. It appends the element to the current set of child elements for the specified parent.
