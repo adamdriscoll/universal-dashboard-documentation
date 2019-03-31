@@ -41,7 +41,7 @@ The above code produces the following chart.
 
 ![Nivo Line Chart](../../.gitbook/assets/image%20%284%29.png)
 
-As you can see the data needs to be a  particular format for each type of chart. The documentation for each chart will provide the data structure you should use. 
+As you can see the data needs to be a  particular format for each type of chart. The documentation for each chart will provide the data structure you should use. For Example: the "Calendar" requires an object containing HashTables whereas some charts may accept JSON or PowerShell objects.
 
 ## Colors
 
