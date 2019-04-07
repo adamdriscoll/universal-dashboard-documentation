@@ -16,7 +16,7 @@ New-UDMuIcon -Icon microchip -Size 4x
 New-UDMuIcon -Icon microchip -Size 6x
 ```
 
-![Multiple Sizes of Icons](../../.gitbook/assets/image%20%2838%29.png)
+![Multiple Sizes of Icons](../../.gitbook/assets/image%20%2842%29.png)
 
 ## Colors
 
@@ -24,7 +24,7 @@ New-UDMuIcon -Icon microchip -Size 6x
 New-UDMuIcon -Icon optin_monster -Size 3x -Style @{color = 'red'}
 ```
 
-![Colored Icon](../../.gitbook/assets/image%20%2811%29.png)
+![Colored Icon](../../.gitbook/assets/image%20%2814%29.png)
 
 ## Spin
 
