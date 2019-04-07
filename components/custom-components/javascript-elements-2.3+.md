@@ -2,6 +2,10 @@
 
 With Universal Dashboard 2.3 and later you can now define JavaScript elements without having to use `New-UDElement`. You can define your own objects and cmdlets without writing any C\# code. 
 
+{% hint style="info" %}
+You can use the [UD Custom Component Template](https://github.com/ironmansoftware/ud-custom-control-template) project to get started quickly with custom components. For a full example project, check out [ud-leaflet](https://github.com/ironmansoftware/ud-leaflet). 
+{% endhint %}
+
 Universal Dashboard uses several web development technologies that may be helpful when developing your own JavaScript-based elements.
 
 * Webpack
