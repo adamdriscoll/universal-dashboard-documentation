@@ -32,7 +32,7 @@ The tenant ID is in the URL of all the endpoints.
 
 To return group claims from AzureAD, you will need to set the groupMembershipClaims property within the application manifest.
 
-![groupMembershipClaims in manifest](../../.gitbook/assets/image%20%284%29.png)
+![groupMembershipClaims in manifest](../../.gitbook/assets/image%20%285%29.png)
 
 ## Configuring UD for AzureAD
 
