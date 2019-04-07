@@ -25,6 +25,8 @@
     * [Charts](components/data-visualizations/charts.md)
     * [Nivo](components/data-visualizations/nivo/README.md)
       * [Bar](components/data-visualizations/nivo/bar.md)
+      * [Calendar](components/data-visualizations/nivo/calendar.md)
+      * [Heatmap](components/data-visualizations/nivo/heatmap.md)
   * [Grids](components/grids.md)
   * [Favicon](components/favicon.md)
   * [Floating Action Button](components/floating-action-button.md)
