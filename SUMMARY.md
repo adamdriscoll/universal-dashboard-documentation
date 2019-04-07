@@ -40,6 +40,7 @@
     * [Card](components/material-ui/card.md)
     * [Chip](components/material-ui/chip.md)
     * [Icon](components/material-ui/icon.md)
+    * [Paper](components/material-ui/paper.md)
     * [Typography](components/material-ui/typography.md)
   * [Pages](components/pages.md)
 * [Endpoints](endpoints/README.md)

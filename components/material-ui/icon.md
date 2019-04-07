@@ -16,7 +16,7 @@ New-UDMuIcon -Icon microchip -Size 4x
 New-UDMuIcon -Icon microchip -Size 6x
 ```
 
-![Multiple Sizes of Icons](../../.gitbook/assets/image%20%2837%29.png)
+![Multiple Sizes of Icons](../../.gitbook/assets/image%20%2838%29.png)
 
 ## Colors
 
