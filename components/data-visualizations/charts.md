@@ -37,7 +37,7 @@ New-UDChart -Type Bar -Endpoint {
 }
 ```
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 
 ## Creating charts with multiple datasets
 
@@ -89,7 +89,7 @@ New-UDChart -Type Bar -Endpoint {
 }
 ```
 
-![Stacked Bar Chart](../../.gitbook/assets/image%20%2815%29.png)
+![Stacked Bar Chart](../../.gitbook/assets/image%20%2820%29.png)
 
 ## Chart with multiple datasets with different chart types
 
@@ -108,5 +108,5 @@ You can set the `type` property of the a dataset created with `New-UDChartDatase
 }
 ```
 
-![](../../.gitbook/assets/image%20%2819%29.png)
+![](../../.gitbook/assets/image%20%2827%29.png)
 
