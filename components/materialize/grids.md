@@ -12,7 +12,7 @@ New-UdGrid -Title "Processes" -Headers @("Name", "ID", "Working Set", "CPU") -Pr
 
 The above script produces the following grid.
 
-![](../.gitbook/assets/griddle.png)
+![](../../.gitbook/assets/griddle.png)
 
 ## Formatting DateTimes on the client
 

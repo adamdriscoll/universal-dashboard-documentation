@@ -4,7 +4,7 @@ Buttons are used for basic interactions from users. You can add event handlers t
 
 ## Raised
 
-![](../.gitbook/assets/raised-button.png)
+![](../../.gitbook/assets/raised-button.png)
 
 ```text
 New-UDButton -Text "Button" 
@@ -14,7 +14,7 @@ New-UDButton -Text "Button" -Icon cloud -IconAlignment right
 
 ## Floating
 
-![](../.gitbook/assets/floating-button.png)
+![](../../.gitbook/assets/floating-button.png)
 
 ```text
 New-UDButton -Floating -Icon plus

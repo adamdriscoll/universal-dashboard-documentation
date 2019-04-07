@@ -20,7 +20,7 @@ New-UDInput -Title "User Data" -Endpoint {
 
 The above input would produce the following card.
 
-![](../.gitbook/assets/new-udinput.png)
+![](../../.gitbook/assets/new-udinput.png)
 
 New-UDInput currently generates textboxes and checkboxes. You can take any action you like within the Endpoint block. For example, you could look for a module in the PowerShell Gallery.
 
@@ -53,7 +53,7 @@ You can validate input by using any of the PowerShell [validation attributes](ht
 
 The `UniversalDashboard.ValidationErrorMessage` is used to provide a custom error message when the default error message is not user friendly enough.
 
-![](../.gitbook/assets/898df26f11ef22bed97a32cc2d1b87c9987456ca.gif)
+![](../../.gitbook/assets/898df26f11ef22bed97a32cc2d1b87c9987456ca.gif)
 
 ## Returning Actions to the User
 
@@ -122,7 +122,7 @@ New-UDInput -Title "Module Info Locator" -Endpoint {
 
 ## Custom Inputs
 
-![](../.gitbook/assets/custom-inputs.png)
+![](../../.gitbook/assets/custom-inputs.png)
 
 In order to further customize a UDInput, you can use the Content parameter of the New-UDInput cmdlet. This parameter lets you customize the input fields more granularly than with an Endpoint parameter alone. When using the Content parameter, the Param block in the Endpoint does not define the fields in the UDInput component. You instead will use New-UDInputField within the Content parameter's script block to define the fields you would like to use.
 

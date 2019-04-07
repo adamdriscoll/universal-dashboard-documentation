@@ -18,5 +18,5 @@ New-UDFab -ButtonColor 'orange' -Icon bathtub -Size Large -onClick {
 }
 ```
 
-![](../.gitbook/assets/fab%20%282%29.gif)
+![](../../.gitbook/assets/fab%20%282%29.gif)
 

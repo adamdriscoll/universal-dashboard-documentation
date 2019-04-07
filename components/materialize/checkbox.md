@@ -2,7 +2,7 @@
 
 ## Properties
 
-![](../.gitbook/assets/checkbox.png)
+![](../../.gitbook/assets/checkbox.png)
 
 ```text
 New-UDCheckbox -Label Unchecked

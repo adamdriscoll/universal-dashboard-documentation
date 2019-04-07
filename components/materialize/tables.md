@@ -17,5 +17,5 @@ New-UDTable -Title "Server Information" -Headers @(" ", " ") -Endpoint {
 
 The above script produces the following HTML control.
 
-![](../.gitbook/assets/new-table-example-image.png)
+![](../../.gitbook/assets/new-table-example-image.png)
 

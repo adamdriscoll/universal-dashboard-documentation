@@ -4,7 +4,7 @@
 Requires Universal Dashboard 2.3 or later
 {% endhint %}
 
-By default, when new [Pages](pages.md) are added to a dashboard, a navigation menu will be created that provides access to all the static pages. Dynamic pages will not show up in the navigation menu. 
+By default, when new [Pages](../pages.md) are added to a dashboard, a navigation menu will be created that provides access to all the static pages. Dynamic pages will not show up in the navigation menu. 
 
 ## Customizing Navigation
 

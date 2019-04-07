@@ -14,7 +14,7 @@ Collapsibles are accordion elements that expand when clicked on. They allow you 
 }
 ```
 
-![Collapsible](../.gitbook/assets/collapsible%20%282%29.gif)
+![Collapsible](../../.gitbook/assets/collapsible%20%282%29.gif)
 
   
 

@@ -4,7 +4,7 @@ Cards are a convenient means of displaying content composed of different types o
 
 ## Basic Cards
 
-![](../.gitbook/assets/basic-card.png)
+![](../../.gitbook/assets/basic-card.png)
 
 ```text
 New-UDCard -Title 'Card Title' -Content {

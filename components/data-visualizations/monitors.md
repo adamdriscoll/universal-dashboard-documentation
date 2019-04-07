@@ -14,5 +14,5 @@ New-UdMonitor -Title "CPU (% processor time)" -Type Line -DataPointHistory 20 -R
 
 The script produces a control like the chart below.
 
-![](../.gitbook/assets/new-monitor-example-chart.png)
+![](../../.gitbook/assets/new-monitor-example-chart.png)
 
