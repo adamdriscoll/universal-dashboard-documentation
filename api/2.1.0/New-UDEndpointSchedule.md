@@ -44,8 +44,15 @@ Creates a schedule for an endpoint.
 
 ### Example 1
 ```
-PS C:\> $EndpointSchedule = New-UDEndpointSchedule -Every 10 -Second
+PS C:\> $Schedule = New-UDEndpointSchedule -Every 10 -Second
 PS C:\> $Endpoint = New-UDEndpoint -Schedule $Schedule -Endpoint {
+    $Cache:Computers = Get-ADComputer
+}
+```
+
+### Example 2
+```
+PS C:\> $Endpoint = New-UDEndpoint -Schedule (New-UDEndpointSchedule -Every 360 -Second) -Endpoint {
     $Cache:Computers = Get-ADComputer
 }
 ```
