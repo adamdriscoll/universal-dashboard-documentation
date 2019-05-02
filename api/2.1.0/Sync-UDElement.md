@@ -37,6 +37,15 @@ PS C:\>  New-UDButton -Text "Button" -Id "Button" -OnClick {
             }
 ```
 
+### Example 2
+```
+      ...
+        @("1", "2", "3") | Sync-UDElement 
+      ...
+```
+
+
+
 Forces the counter to update its state when the button is clicked. 
 
 ## PARAMETERS
