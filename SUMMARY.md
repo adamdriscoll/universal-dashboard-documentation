@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Getting Started](getting-started.md)
 * [System Requirements](system-requirements.md)
 * [Feature Comparison](feature-comparison.md)
 * [Concepts](concepts.md)
