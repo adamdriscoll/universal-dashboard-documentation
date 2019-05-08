@@ -28,7 +28,7 @@ Shows a modal. This can be called from any endpoint.
 PS C:\> New-UDButton -Text "Show Modal" -OnClick {
     Show-UDModal -Header {
         New-UDHeading -Size 4 -Text "Modal"
-    } -Context {
+    } -Content {
         "This is a modal"
     }
 }
