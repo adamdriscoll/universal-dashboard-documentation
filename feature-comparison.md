@@ -1,6 +1,6 @@
 # Feature Comparison
 
-Universal Dashboard Community edition is open source and available for free. Universal Dashboard provides additional features. A license for [Universal Dashboard can be purchase on our store](https://ironmansoftware.com/product/powershell-universal-dashboard/). 
+Universal Dashboard Community edition is open source and available for free. Universal Dashboard provides additional features. A license for [Universal Dashboard can be purchased on our store](https://ironmansoftware.com/product/powershell-universal-dashboard/). 
 
 | Feature | Community | Enterprise |
 | :--- | :--- | :--- |
