@@ -4,7 +4,7 @@
 Not available in Community Edition.
 {% endhint %}
 
-To use Windows Authentication, you will need to [host Universal Dashboard in IIS](https://github.com/adamdriscoll/universal-dashboard-documentation/tree/15ca122d89e54271ad0661a8e75dd3cf33c0520c/security/running-dashboards/iis.md).
+To use Windows Authentication, you will need to [host Universal Dashboard in IIS](/security/running-dashboards/iis.md).
 
 After configuring UD to run in IIS, you will need to [enable Windows Authentication on your site](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/windowsauth?view=aspnetcore-2.2#iis-configuration).
 
