@@ -55,7 +55,7 @@ HTTP methods like POST take data from the request body. UD supports form data an
 $Endpoint = New-UDEndpoint -Url "/process" -Method "POST" -Endpoint {
      param($FilePath, $Arguments)
 
-     Start-Process -FilePath $FilePath -Arguments $Arguments
+     Start-Process -FilePath $FilePath -ArgumentsList $Arguments
 }
 Start-UDRestApi -Endpoint $Endpoint 
 
