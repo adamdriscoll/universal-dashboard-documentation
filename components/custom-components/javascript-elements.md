@@ -1,6 +1,10 @@
-# JavaScript Elements \(pre 2.3\)
+# JavaScript Elements
 
-New-UDElement can also define JavaScript-based components. These components should define a React component that is capable of loading into a React single page application.
+With Universal Dashboard 2.3 and later you can now define JavaScript elements without having to use `New-UDElement`. You can define your own objects and cmdlets without writing any C\# code. 
+
+{% hint style="info" %}
+You can use the [UD Custom Component Template](https://github.com/ironmansoftware/ud-custom-control-template) project to get started quickly with custom components. For a full example project, check out [ud-leaflet](https://github.com/ironmansoftware/ud-leaflet). 
+{% endhint %}
 
 Universal Dashboard uses several web development technologies that may be helpful when developing your own JavaScript-based elements.
 
@@ -8,8 +12,6 @@ Universal Dashboard uses several web development technologies that may be helpfu
 * Babel
 * React
 * NPM
-
-For this example, we will be using the [UDSparklines](https://github.com/ironmansoftware/ud-sparklines) project.
 
 To get started, you will need to define a NPM package.json file. This final defines the package's dependencies and any tooling that is required to bundle the package into a final JS file. UDSparklines uses react-sparklines.
 
@@ -47,7 +49,9 @@ To define how webpack packages the JS file, we need to use a webpack.config.js. 
 
 The `filename` option defines the output value of webpack. The `entry` option defines the input file. In this case, we are using Babel JSX to define our React component. You can also define React components with Typescript and JavaScript.
 
-Finally, we are including a `UniversalDashboard` external. This variable is available to all custom components and defines functions for calling back to the server.
+Next, we are including a `UniversalDashboard` external. This variable is available to all custom components and defines functions for calling back to the server.
+
+Finally, we use the provide plugin for React. This ensures that you do not include all over React with each of your components as UD will provide this dependency. 
 
 ```text
 var webpack = require('webpack');
@@ -81,12 +85,16 @@ module.exports = (env) => {
     resolve: {
       extensions: ['.json', '.js', '.jsx']
     },
-    plugins: []
+    plugins: [
+      new webpack.ProvidePlugin({
+        React: "React", react: "React", "window.react": "React", "window.React": "React"
+    }),
+    ]
   };
 }
 ```
 
-The actual implementation of our React component is very minimal. It imports the `react-sparklines` components and passes props to them. These props are provided via PowerShell and the `New-UDElement` cmdlet.
+The actual implementation of our React component is very minimal. It imports the `react-sparklines` components and passes props to them. We need to ensure that when this JavaScript file is loaded by UniversalDashboard, the component is registered. 
 
 ```text
 import React from 'react';
@@ -101,11 +109,28 @@ export default class UDSparklines extends React.Component {
       );
     }
 }
+
+UniversalDashboard.register("sparklines", UDSparklines);
 ```
 
-Finally, the `New-UDElement` cmdlet is used to bring it all together. It defines the JavaScript file to import. The `ModuleName` parameter should be a globally unique name for the component. The hashtable defined by `Properties` will be passed to the JavaScript component via `this.props`.
+You will need to package your JavaScript before including it with your module. You can do this by running the npm build command. From the same directory where your package.json is. 
 
 ```text
+npm run build
+```
+
+Finally, we can write the PowerShell script to create these components. The first step is to register the JavaScript with Universal Dashboard. This will return an ID that you need to include with your components. This ensures the JavaScript is loaded when you use a component. JavaScript is only loaded when the component is used. It won't be loaded more than once.
+
+Now you can create a function that users will call. The function should return a hashtable. Make sure to set `isPlugin` to `$true` and `assetId` to the value you received when registering your script. 
+
+{% code-tabs %}
+{% code-tabs-item title="sparklines.psm1" %}
+```text
+
+$JsFiles = Get-ChildItem "$PSScriptRoot\*.bundle.js"
+$SparklinesFile = $JsFiles | Where-Object { $_.FullName.Contains("sparklines")}
+$AssetId = [UniversalDashboard.Services.AssetService]::Instance.RegisterScript($SparklinesFile.FullName)
+
 function New-UDSparkline {
     param(
         [Parameter()]
@@ -116,13 +141,19 @@ function New-UDSparkline {
         $Margin = 5
     )
 
-    New-UDElement -JavaScriptPath $JsFile -ModuleName "UDSparklines" -Properties @{
-        data = $Data
-        color = $Color
-        margin = $Margin
+    @{
+         isPlugin = $true
+         assetId = $AssetId 
+         data = $Data 
+         color = $Color
+         margin = $Margin
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
-The full source code for this example is on [GitHub](https://github.com/ironmansoftware/ud-sparklines).
+## Distribution
+
+At a minimum you will need to include the bundled JavaScript file and PSM1 file in a module. Users can then load this module into UD for use. 
 
